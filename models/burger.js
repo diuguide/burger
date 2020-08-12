@@ -4,7 +4,9 @@ const burger = {
     all: (callback) => {
         orm.all('burgers', (res) => {
             callback(res);
+            console.log('RES burger.js', res);
         });
+
     },
     create: (cols, vals, callback) => {
         orm.create('burgers', cols, vals, (res) => {
