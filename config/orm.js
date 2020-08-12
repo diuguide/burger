@@ -1,8 +1,8 @@
 const connection = require("../config/connection.js");
 
 const orm = {
-    all: (tableInput, cb) => {
-        connection.query('SELECT * FROM ?', tableInput, (err, data) => {
+    all: (table, cb) => {
+        connection.query('SELECT * FROM ?', table, (err, data) => {
             if (err) {
                 res.status(500).end();
             }
