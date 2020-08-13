@@ -1,4 +1,8 @@
-<h1>BURGERS</h1>
+<img id="burger_image" src="/images/burger.png" alt="a delicious burger">
+<br>
+<h1 id="title">Eat-Da-Burger!</h1>
+<br>
+<h1 id="prepared">Ready to Eat!</h1>
 <br>
 <ul>
   {{#each burgers}}
@@ -7,9 +11,7 @@
     {{/unless}}
   {{/each}}
 </ul>
-
-<hr>
-<h1>DEVOURED BURGERS</h1>
+<h1>Already Devoured!</h1>
 <ul>
   {{#each burgers}}
   {{#if devoured}}
@@ -17,10 +19,8 @@
     {{/if}}
   {{/each}}
 </ul>
-<hr>
 <form action="/api/burgers" method="POST">
 <input type='text'  name="burger_name" />
 <button id="makeBtn">MAKE</button>
-
 </form>
 

@@ -2,7 +2,6 @@ $('.devourBtn').on('click', function() {
     let id = $(this).data("id");
     $.ajax("/api/burgers/" + id, {
         type: "PUT"
-        
       }).then(
         function(data) {
     
@@ -10,5 +9,4 @@ $('.devourBtn').on('click', function() {
           location.reload();
         }
       );
-
 })
