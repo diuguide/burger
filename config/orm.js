@@ -6,22 +6,23 @@ const orm = {
         connection.query(queryString, (err, data) => {
             if (err) throw err;
             cb(data);
-            console.log('ORM', data);
         });
+    },
+
+    create: (table, cols, vals, cb) => {
+        connection.query('INSERT INTO ?? (??, ??) VALUES (?, ?)', [table, cols[0], cols[1], vals[0], vals[1]], (err, results) => {
+            if (err) throw err;
+            console.log("UPDATED");
+            cb(results);
+        })
+    },
+    update: (table, cols, vals, cb) => {
+        const statement = connection.query('UPDATE ?? SET ?? = ? WHERE ?? = ?', [table, cols[0], vals[0], cols[1], vals[1]], (err, result) => {
+            if (err) throw err;
+            cb(result);
+        })
+        console.log(statement.sql);
     }
-    // },
-    // create: (table, cols, vals, cb) => {
-    //     connection.query('INSERT INTO ' + table + '(' + cols + ') VALUES (' + vals + ');', (err) => {
-    //         if (err) throw err;
-    //         console.log("UPDATED");
-    //     })
-    // },
-    // update: (table, objColVals, condition, cb) => {
-    //     connection.query('UPDATE' + table + 'SET' + objColVals + ' WHERE id =' + condition + ';', (err) => {
-    //         if (err) throw err;
-    //         console.log("UPDATED");
-    //     })
-    // }
 }
 
 module.exports = orm;

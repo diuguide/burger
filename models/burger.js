@@ -4,7 +4,6 @@ const burger = {
     all: (callback) => {
         orm.all('burgers', (res) => {
             callback(res);
-            console.log('RES burger.js', res);
         });
 
     },
@@ -13,8 +12,8 @@ const burger = {
             callback(res);
         })
     },
-    update: (objColVals, condition, callback) => {
-        orm.update('burgers', objColVals, condition, (res) => {
+    update: (cols, vals, callback) => {
+        orm.update('burgers', cols, vals, (res) => {
             callback(res);
         })
     }

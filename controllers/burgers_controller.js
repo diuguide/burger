@@ -13,15 +13,18 @@ router.get('/', (req, res) => {
         res.render('index', obj);
     });
 });
-// router.post('api/burgers', (req, res) => {
-//     burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], (result) =>{
-//     // res.json({ });    
-//     });
-   
-// });
-// router.put('/api/burgers/:devoured', (req, res) => {
-//     let condition = "devoured = " + req.params.devoured;
-//     burger.update
-// })
+router.post('/api/burgers', (req, res) => {
+    burger.create(["burger_name", "devoured"], [req.body.burger_name, false], (result) => {
+        res.redirect("/");
+    });
+
+});
+router.put('/api/burgers/:id', (req, res) => {
+    let id = req.params.id;
+
+    burger.update(["devoured", "id"], [true, id], (result) => {
+        res.json(result);
+    })
+})
 
 module.exports = router;
