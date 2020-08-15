@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 m-2">
       <img id="burger_image" src="/images/burger.png" alt="a delicious burger">
       <br>
       <h1 id="title">Eat-Da-Burger!</h1>
@@ -13,7 +13,7 @@
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        <li>{{ burger_name }} <button class="devourBtn" data-id={{ id }}>DEVOUR</button></li>
+        <li>{{ burger_name }} <button class="devourBtn" data-id={{ id }}>Devour It!</button></li>
         {{/unless}}
         {{/each}}
       </ul>
@@ -30,10 +30,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4 border" id="formId">
+    <div class="col-6 d-flex justify-content-center" p-2 m-2 id="formId">
       <form action="/api/burgers" method="POST">
         <input type='text' name="burger_name" />
-        <button id="makeBtn">MAKE</button>
+        <button id="makeBtn">MAKE A BURGER</button>
       </form>
     </div>
   </div>
