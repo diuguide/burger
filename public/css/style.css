@@ -1,4 +1,5 @@
-body {
+.container {
+    width: 100%;
     background-color: #f4c260;
 }
 #burger_image {
@@ -10,4 +11,10 @@ body {
 #title {
     text-align: center;
     color: red;
+}
+#formId {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }

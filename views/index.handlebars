@@ -1,26 +1,45 @@
-<img id="burger_image" src="/images/burger.png" alt="a delicious burger">
-<br>
-<h1 id="title">Eat-Da-Burger!</h1>
-<br>
-<h1 id="prepared">Ready to Eat!</h1>
-<br>
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-   <li>{{ burger_name }} <button class="devourBtn" data-id= {{ id }}>DEVOUR</button></li>
-    {{/unless}}
-  {{/each}}
-</ul>
-<h1>Already Devoured!</h1>
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-   <li>{{ burger_name }}</li>
-    {{/if}}
-  {{/each}}
-</ul>
-<form action="/api/burgers" method="POST">
-<input type='text'  name="burger_name" />
-<button id="makeBtn">MAKE</button>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <img id="burger_image" src="/images/burger.png" alt="a delicious burger">
+      <br>
+      <h1 id="title">Eat-Da-Burger!</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-dark">
+      <h1 id="prepared">Ready to Eat!</h1>
+      <br>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li>{{ burger_name }} <button class="devourBtn" data-id={{ id }}>DEVOUR</button></li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-6 border border-dark">
+      <h1>Already Devoured!</h1>
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>{{ burger_name }}</li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 border" id="formId">
+      <form action="/api/burgers" method="POST">
+        <input type='text' name="burger_name" />
+        <button id="makeBtn">MAKE</button>
+      </form>
+    </div>
+  </div>
 
+  <br>
+
+
+
+</div class="container">
