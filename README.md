@@ -1,5 +1,8 @@
 # Eat-Da-Burger 
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)
+  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)
+
+  ![Alt text](/public/images/screenshot.png)
+
   # Table of Contents
   * [Project Description](#project-description)
   * [Installation](#installation)
@@ -13,7 +16,7 @@
   # Installation
   The user needs to install node, express-handlebars, and mysql inorder to run this program from the terminal.  Once started using the server.js file, the program can be used inside of chrome.
   # Usage
-  Please use your browser to use this program.
+  Please use your browser to use this program. https://aqueous-cove-58745.herokuapp.com/
   # Tests
   
   # License
